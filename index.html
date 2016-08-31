@@ -74,18 +74,154 @@ body {
 	margin:80px 80px 100px 100px;
 }
 
+h1,
+h1+p {
+	margin: 30px 15px 0;
+	font-weight: 300;
+}
+h1+p a {
+	color: #333;
+}
+h1+p a:hover {
+	text-decoration: none;
+}
+h2 {
+	margin: 60px 15px 0;
+	padding: 0;
+	font-weight: 300;
+}
+h2 span {
+	margin-left: 1em;
+	color: #aaa;
+	font-size: 85%;
+}
+
+.column {
+	margin: 15px 15px 0;
+	padding: 0;
+}
+.column:last-child {
+	padding-bottom: 60px;
+}
+.column::after {
+	content: '';
+	clear: both;
+	display: block;
+}
+.column div {
+	position: relative;
+	float: left;
+	width: 300px;
+	height: 200px;
+	margin: 0 0 0 25px;
+	padding: 0;
+}
+.column div:first-child {
+	margin-left: 0;
+}
+.column div span {
+	position: absolute;
+	bottom: -20px;
+	left: 0;
+	z-index: -1;
+	display: block;
+	width: 300px;
+	margin: 0;
+	padding: 0;
+	color: #444;
+	font-size: 18px;
+	text-decoration: none;
+	text-align: center;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+	opacity: 0;
+}
+
+figure:hover+span {
+	bottom: -36px;
+	opacity: 1;
+}
+
+/* Opacity #1 */
+.hover11 figure img {
+	opacity: 1;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.hover11 figure:hover img {
+	opacity: .5;
+}
+
+.column {
+	margin: 15px 15px 0;
+	padding: 0;
+}
+.column:last-child {
+	padding-bottom: 60px;
+}
+.column::after {
+	content: '';
+	clear: both;
+	display: block;
+}
+.column div {
+	position: relative;
+	float: left;
+	width: 300px;
+	height: 200px;
+	margin: 0 0 0 25px;
+	padding: 0;
+}
+.column div:first-child {
+	margin-left: 0;
+}
+.column div span {
+	position: absolute;
+	bottom: -20px;
+	left: 0;
+	z-index: -1;
+	display: block;
+	width: 300px;
+	margin: 0;
+	padding: 0;
+	color: #444;
+	font-size: 18px;
+	text-decoration: none;
+	text-align: center;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+	opacity: 0;
+}
+
 </style>
 </HEAD>
 <BODY>
 <!--<BODY bgcolor="#FFFFFF" text="#000000" style="background-image:url(imagenes/bg_uniforce.jpg); background-size:100%">-->
 <div align='center' id="fixedheader" ><img src="imagenes/logo total.png" width="300" border='0' style="padding:15px;"></div>
-<TABLE cellSpacing='0' cellPadding='0' width='900' align='center' border='0' style="margin-top:300px;">
+
+	<h2 id="demo11">11. Opacity #1</h2>
+	<div class="hover11 column">
+		<div>
+			<figure><img src="imagenes/red_media_tension.png" /></figure>
+			<span>Hover</span>
+		</div>
+		<div>
+			<figure><img src="imagenes/red_media_tension.png" /></figure>
+			<span>Hover</span>
+		</div>
+		<div>
+			<figure><img src="imagenes/red_media_tension.png" /></figure>
+			<span>Hover</span>
+		</div>
+	</div>
+
+<!--<TABLE cellSpacing='0' cellPadding='0' width='900' align='center' border='0' style="margin-top:300px;">
  <TR>
   <TD width="33%" align='center' nowrap="nowrap"><div class="titulo_seccion padding2">Contrato 319 - 2013</div><a href="informe/" title="Ingresar"><img src="imagenes/red_media_tension.png" height="227" border='0' class="img_link" style="top:10px; left:50px;"></a></TD>
   <TD width="33%" align='center' nowrap="nowrap"><div class="titulo_seccion padding2">Contrato 231 - 2014</div><a href="bt/informe/" title="Ingresar"><img src="imagenes/red_media_tension.png" height="227" border='0' class="img_link" style="top:10px; left:50px;"></a></TD>
   <TD width="34%" align='center' nowrap="nowrap"><div class="titulo_seccion padding2">Contrato 332 - 2016</div><a href="levantamientos/informe/" title="Ingresar"><img src="imagenes/red_media_tension.png" height="227" border='0' class="img_link" style="top:10px; left:50px;"></a></TD>
  </TR>
-</TABLE>
+</TABLE>-->
 <div align='center' id="fixedfooter">Calle 2 No. 33-154 Av. Panamericana <br/> jesushidalgo@ingenieros.com <br/> 3113421487 - 7290104 </div>
 </BODY>
 </HTML>
