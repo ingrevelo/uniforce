@@ -10,9 +10,9 @@
 @charset "utf-8";
 /* CSS Document */
 
+var x = 2000 + screen.width;
 var { 
     y: screen.height;
-    x: screen.height;
 }
 
 body {
@@ -35,7 +35,7 @@ h1 {
 
 h3 { 
    position: absolute; 
-   top: 900;
+   top: x + "px";
    left: 0; 
    width: 100%;
 }
