@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <title>..:: UNIFORCE ::..</title>
 <link rel="stylesheet" type="text/css"<link href="https://fonts.googleapis.com/css?family=Lato:300i|Inconsolata|Vollkorn" rel="stylesheet">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript" src="functions.js"></script>
 <style>
@@ -170,13 +171,17 @@ div#fixedfooter {
 </head>
 <body>
 <div align='center' id="fixedheader" ><img src="imagenes/logo total.png" width="280"></div>
-<div align='center' id="slideshow">
-   <div><img src="imagenes/detal.jpg" style="width:100%; height:100vh;"><h3 align='left'><span>PUNTO DE <strong>VENTAS AL DETAL</strong></span></h3></div>
+<!--<div align='center' id="slideshow">-->
+	<img class="mySlides w3-animate-fading" src="imagenes/detal.jpg" style="width:100%; height:100vh;">
+	<img class="mySlides w3-animate-fading" src="imagenes/slider.jpg" style="width:100%; height:100vh;">
+	<img class="mySlides w3-animate-fading" src="imagenes/material.jpg" style="width:100%; height:100vh;">
+	<img class="mySlides w3-animate-fading" src="imagenes/led.jpg" style="width:100%; height:100vh;">
+<!--   <div><img src="imagenes/detal.jpg" style="width:100%; height:100vh;"><h3 align='left'><span>PUNTO DE <strong>VENTAS AL DETAL</strong></span></h3></div>
    <div><img src="imagenes/slider.jpg" style="width:100%; height:100vh;"><h3 align='left'><span>EXPERTOS EN CONSTRUCCIÓN DE REDES ELÉCTRICAS DE <strong>MEDIA Y BAJA TENSIÓN</strong></span></h3></div>
    <div><img src="imagenes/material.jpg" style="width:100%; height:100vh;"><h3 align='left'><span>DISTRIBUIDOR MAYORISTA DE <strong>MATERIALES ELÉCTRICOS</strong></span></h3></div>
    <div><img src="imagenes/led.jpg" style="width:100%; height:100vh;"><h3 align='left'><span>ACCESORIOS PARA <strong>ILUMINACIÓN DE INTERIORES</strong></span></h3></div>
    <div><img src="imagenes/tienda.jpg" style="width:100%; height:100vh;"><h3 align='left'><span>FÁCIL ACCESO Y <strong>PARQUEADERO PRIVADO PARA CLIENTES</strong></span></h3></div>
-</div>
+</div>-->
 <div align='center'><h1>DISEÑOS DE REDES ELÉCTRICAS</h1></div>
 <hr width="50%" color="#C42329" size="1" align="center">
 <table cellSpacing='0' cellPadding='0' width='900' align='center' style="margin-top:50px;">
@@ -216,5 +221,22 @@ div#fixedfooter {
 	<img src = 'imagenes/telefono.png' style='vertical-align: middle' width="11"/> 3127747643 - 3137107790 - (2)7290104<br/>  
 	<img src = 'imagenes/mail.png' style='vertical-align: middle' width="11"/> comercial@uniforce.com.co
 </div>
+
+<script>
+var myIndex = 0;
+carousel();
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 9000);
+}
+</script>
+
 </body>
 </html>
