@@ -1,4 +1,6 @@
 $("#slideshow > div:gt(0)").hide();
+$("#slideshow > div:gt(1)").hide();
+$("#slideshow > div:gt(2)").hide();
 
 setInterval(function() { 
   $('#slideshow > div:first')
