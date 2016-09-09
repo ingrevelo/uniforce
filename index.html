@@ -27,13 +27,13 @@ h1 {
 }
 h3 { 
    position: absolute; 
-   top: 70vh;
+   top: 80vh;
    left: 0; 
    width: 100%;
 }
 h3 span { 
    color: white; 
-   font: 30px Lato, sans-serif; 
+   font: 35px Lato, sans-serif; 
    background: rgba(0, 0, 0, 0.6);
    padding: 10px; 
    text-shadow: 2px 2px 2px #aaa;
@@ -216,22 +216,5 @@ div#fixedfooter {
 	<img src = 'imagenes/telefono.png' style='vertical-align: middle' width="11"/> 3127747643 - 3137107790 - (2)7290104<br/>  
 	<img src = 'imagenes/mail.png' style='vertical-align: middle' width="11"/> comercial@uniforce.com.co
 </div>
-
-<script>
-var myIndex = 0;
-carousel();
-function carousel() {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    for (i = 0; i < x.length; i++) {
-       x[i].style.display = "none";
-    }
-    myIndex++;
-    if (myIndex > x.length) {myIndex = 1}
-    x[myIndex-1].style.display = "block";
-    setTimeout(carousel, 9000);
-}
-</script>
-
 </body>
 </html>
