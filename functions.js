@@ -7,4 +7,5 @@ setInterval(function() {
     .fadeIn(3000)
     .end()
     .appendTo('#slideshow');
+    .display("none");
 },  4000);
