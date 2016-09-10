@@ -26,9 +26,6 @@
               $ArrowNavigatorOptions: {
                 $Class: $JssorArrowNavigator$
               },
-              $BulletNavigatorOptions: {
-                $Class: $JssorBulletNavigator$
-              },
               $ThumbnailNavigatorOptions: {
                 $Class: $JssorThumbnailNavigator$,
                 $Cols: 1,
@@ -59,34 +56,6 @@
     </script>
 
     <style>
-        
-        /* jssor slider bullet navigator skin 01 css */
-        /*
-        .jssorb01 div           (normal)
-        .jssorb01 div:hover     (normal mouseover)
-        .jssorb01 .av           (active)
-        .jssorb01 .av:hover     (active mouseover)
-        .jssorb01 .dn           (mousedown)
-        */
-        .jssorb01 {
-            position: absolute;
-        }
-        .jssorb01 div, .jssorb01 div:hover, .jssorb01 .av {
-            position: absolute;
-            /* size of bullet elment */
-            width: 12px;
-            height: 12px;
-            filter: alpha(opacity=70);
-            opacity: .7;
-            overflow: hidden;
-            cursor: pointer;
-            border: #000 1px solid;
-        }
-        .jssorb01 div { background-color: gray; }
-        .jssorb01 div:hover, .jssorb01 .av:hover { background-color: #d3d3d3; }
-        .jssorb01 .av { background-color: #fff; }
-        .jssorb01 .dn, .jssorb01 .dn:hover { background-color: #555555; }
-
         /* jssor slider arrow navigator skin 05 css */
         /*
         .jssora05l                  (normal)
@@ -175,10 +144,6 @@
                 </div>
             </div>
             <!-- Thumbnail Item Skin End -->
-        </div>
-        <!-- Bullet Navigator -->
-        <div data-u="navigator" class="jssorb01" style="bottom:16px;right:16px;">
-            <div data-u="prototype" style="width:12px;height:12px;"></div>
         </div>
         <!-- Arrow Navigator -->
         <span data-u="arrowleft" class="jssora05l" style="top:0px;left:8px;width:40px;height:40px;" data-autocenter="2"></span>
