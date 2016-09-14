@@ -1,60 +1,123 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <title></title>
-</head>
-<body style="padding:0px; margin:0px; background-color:#fff;font-family:Arial, sans-serif">
-    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
-    <script type="text/javascript" src="js/jssor.slider-21.1.5.mini.js"></script>
-    <!-- use jssor.slider-21.1.5.debug.js instead for debug -->
-    <script>
-        jQuery(document).ready(function ($) {
-            var jssor_1_SlideshowTransitions = [
-              {$Duration:1200,$Opacity:2}
+<meta charset="utf-8">
+<title>..:: UNIFORCE ::..</title>
+<link rel="stylesheet" type="text/css"<link href="https://fonts.googleapis.com/css?family=Lato:300i|Inconsolata|Vollkorn" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript" src="functions.js"></script>
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="js/jssor.slider-21.1.5.mini.js"></script>
+<!-- use jssor.slider-21.1.5.debug.js instead for debug -->
+<style>
+    body {
+        font-family: 'Inconsolata', serif;
+        font-size: 18px;
+        background-color: #f2f2f2;
+	    margin:0px 0px 0px 0px;    
+    }
+    select,input,th,td,p,a { 
+	    font-family: 'Inconsolata', serif;
+	    font-size: 11px;
+    }
+    h1 {
+        color: #C42329;
+        font-family: 'Lato', sans-serif;
+        text-shadow: 4px 4px 4px #aaa;
+        margin-top:100px;
+    }
+    h3 { 
+        position: absolute; 
+        top: 80vh;
+        left: 0; 
+        width: 100%;
+    }
+    h3 span { 
+        color: white; 
+        font: 35px Lato, sans-serif; 
+        background: rgba(0, 0, 0, 0.6);
+        padding: 10px; 
+        text-shadow: 2px 2px 2px #aaa;
+    }
+    /* CSS Header, Footer & Project Title */
+    div#fixedheader {
+	    position:fixed; 
+	    top:0px;
+	    left:0px;
+	    width:100%;
+	    color:#f2f2f2;
+	    background-color: rgba(13,13,13,.6);
+	    padding-top: 10px;
+	    padding-bottom: 10px;
+	    z-index:1;
+    }
+    div#fixedfooter {
+	    position:fixed; 
+	    bottom:0px;
+	    left:0px;
+	    width:100%;
+	    color:#f2f2f2;
+	    background-color: rgba(13,13,13,.6);
+	    padding-top: 10px;
+	    padding-bottom: 10px;
+	    z-index:1;
+	    font-size:13px;
+	    text-shadow: 4px 4px 4px #aaa;
+    }
+    .titulo_seccion	{
+	    font-family: 'Lato', serif;
+	    font-weight: bold;
+	    font-size:19px;
+	    color:#333;
+	    text-shadow: 4px 4px 4px #aaa;
+	    margin-bottom: 10px;
+    }
+    .jssor_1 {
+        position: relative; 
+        margin: 0 auto; 
+        top: 0px; 
+        left: 0px; 
+        width: 100%; 
+        height: 100vh; 
+        overflow: hidden; 
+        visibility: hidden;
+    }
+    div {
+        position:fixed !important;
+        position:absolute;
+        top:0;
+        right:0;
+        bottom:0;
+        left:0;
+    }
+</style>
+<script>
+    jQuery(document).ready(function ($) {
+        var jssor_1_SlideshowTransitions = [
+            {$Duration:1200,$Opacity:2}
             ];
-            var jssor_1_SlideoTransitions = [
-              [{b:-1,d:1,o:-1},{b:0,d:600,x:-1630,o:1,e:{x:6}}],
-              [{b:-1,d:1,o:-1},{b:0,d:600,x:-1630,o:1,e:{x:6}}],
-              [{b:-1,d:1,o:-1},{b:0,d:600,x:-1630,o:1,e:{x:6}}]
+        var jssor_1_SlideoTransitions = [
+             [{b:-1,d:1,o:-1},{b:0,d:600,x:-1630,o:1,e:{x:6}}],
+             [{b:-1,d:1,o:-1},{b:0,d:600,x:-1630,o:1,e:{x:6}}],
+             [{b:-1,d:1,o:-1},{b:0,d:600,x:-1630,o:1,e:{x:6}}]
             ];
-            var jssor_1_options = {
-              $AutoPlay: true,
-              $Idle: 2000,
-              $SlideshowOptions: {
-                $Class: $JssorSlideshowRunner$,
-                $Transitions: jssor_1_SlideshowTransitions,
-                $TransitionsOrder: 1
-              },
-              $CaptionSliderOptions: {
-                $Class: $JssorCaptionSlideo$,
-                $Transitions: jssor_1_SlideoTransitions
-              },
+        var jssor_1_options = {
+            $AutoPlay: true,
+            $Idle: 2000,
+            $SlideshowOptions: {
+            $Class: $JssorSlideshowRunner$,
+            $Transitions: jssor_1_SlideshowTransitions,
+            $TransitionsOrder: 1
+            },
+            $CaptionSliderOptions: {
+            $Class: $JssorCaptionSlideo$,
+            $Transitions: jssor_1_SlideoTransitions
+             },
             };
             var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
         });
-    </script>
-    <style>
-        .jssor_1 {
-            position: relative; 
-            margin: 0 auto; 
-            top: 0px; 
-            left: 0px; 
-            width: 100%; 
-            height: 100vh; 
-            overflow: hidden; 
-            visibility: hidden;
-        }
-        div {
-            position:fixed !important;
-            position:absolute;
-            top:0;
-            right:0;
-            bottom:0;
-            left:0;
-        }
-    </style>
-    
+</script>
+<div align='center' id="fixedheader" ><img src="imagenes/logo total.png" width="280"></div>
     <div align='center' id="jssor_1">
         <!-- Loading Screen -->
         <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
@@ -80,5 +143,44 @@
             </div>            
         </div>
     </div>
+<div align='center'><h1>DISEÑOS DE REDES ELÉCTRICAS</h1></div>
+<hr width="50%" color="#C42329" size="1" align="center">
+<table cellSpacing='0' cellPadding='0' width='900' align='center' style="margin-top:50px;">
+<tr>
+<td width="33%" align='center' nowrap="nowrap">
+<div class="titulo_seccion padding2">Proyecto 319 - 2013</div>
+<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+    <div class="hovereffect"><img class="img-responsive" src="imagenes/proyecto1.gif" width="250" border='0' style="left:25px;">
+            <div class="overlay"><h2>Remodelación de Redes<BR>de Baja y Media Tensión<BR>La Cruz, Nariño, La Unión</h2><p><a href="informe/" title="Ingresar">INGRESAR</a></p></div>
+    </div>
+</div>
+</td>
+<td width="33%" align='center' nowrap="nowrap">
+<div class="titulo_seccion padding2">Proyecto 231 - 2014</div>
+<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+    <div class="hovereffect"><img class="img-responsive" src="imagenes/proyecto3.gif" width="250" border='0' style="left:25px;">
+            <div class="overlay"><h2>Remodelación de Redes<BR>de Baja y Media Tensión<BR>La Cruz, Nariño, La Unión</h2><p><a href="bt/informe/" title="Ingresar">INGRESAR</a></p></div>
+    </div>
+</div>
+</td>
+<td width="33%" align='center' nowrap="nowrap">
+<div class="titulo_seccion padding2">Proyecto 332 - 2016</div>	
+<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+    <div class="hovereffect"><img class="img-responsive" src="imagenes/proyecto4.gif" width="250" border='0' style="left:25px;">
+            <div class="overlay"><h2>Remodelación de Redes<BR>de Baja y Media Tensión<BR>Zona Note, Centro,<BR>Pacifíco y Occidente</h2><p><a href="levantamientos/informe/" title="Ingresar">INGRESAR</a></p></div>
+    </div>
+</div>
+</td>
+</tr>
+</table>
+<div align='center'><h1>NUESTRAS MARCAS</h1></div>
+<hr width="50%" color="#C42329" size="1" align="center">
+	<div align='center' style="margin-top:50px;"><img src="imagenes/marcas.png" width="700"></div>
+	<div align='center' style="margin-bottom:150px;"><img src="imagenes/marcas2.png" width="700"></div>
+<div align='center' id="fixedfooter" line-height:16px;">
+	<img src = 'imagenes/direccion.png' style='vertical-align: middle' width="9"/> Calle 2 No. 33-154 Av. Panamericana / Pasto-Colombia <br/> 
+	<img src = 'imagenes/telefono.png' style='vertical-align: middle' width="11"/> 3127747643 - 3137107790 - (2)7290104<br/>  
+	<img src = 'imagenes/mail.png' style='vertical-align: middle' width="11"/> comercial@uniforce.com.co
+</div>
 </body>
 </html>
